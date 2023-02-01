@@ -123,6 +123,11 @@ USE car;
 -- ORDER BY average DESC
 -- LIMIT 10;
 
+SELECT AVG(car_performance.fee*car_performance.renterTripsTaken) AS average
+FROM car.car_location JOIN car.car_performance
+ON car_location.car_id = car_performance.car_id
+WHERE car_location.location_city = "Beverly Hills";
+
 -- 3. The ratings on the sites have any co-relation?
 -- SELECT *
 -- FROM car_performance
