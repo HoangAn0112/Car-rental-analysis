@@ -123,10 +123,12 @@ USE car;
 -- ORDER BY average DESC
 -- LIMIT 10;
 
-SELECT AVG(car_performance.fee*car_performance.renterTripsTaken) AS average
-FROM car.car_location JOIN car.car_performance
-ON car_location.car_id = car_performance.car_id
-WHERE car_location.location_city = "Beverly Hills";
+-- SELECT AVG(car_performance.fee*car_performance.renterTripsTaken) AS average
+-- FROM car.car_location JOIN car.car_performance
+-- ON car_location.car_id = car_performance.car_id
+-- ORDER BY average DESC
+-- LIMIT 10
+-- WHERE car_location.location_city = "Beverly Hills";
 
 -- 3. The ratings on the sites have any co-relation?
 -- SELECT *
@@ -134,6 +136,25 @@ WHERE car_location.location_city = "Beverly Hills";
 -- WHERE renterTripsTaken < reviewCount
 
 -- ANSWER: 2 supicious cars that have more reviews than booked trips
+
+-- SELECT  AVG(car_performance.renterTripsTaken) AS average_rent,
+-- 	    AVG(car_performance.fee) AS ave_fee,
+-- 		car_location.location_city,
+-- 		COUNT(*) as count
+-- FROM car.car_performance JOIN car.car_location
+-- ON car_location.car_id = car_performance.car_id
+-- GROUP By car_location.location_city
+-- HAVING count > 10
+-- ORDER BY ave_fee DESC
+-- LIMIT 10;
+-- WHERE vehicle_make = "Tesla";
+
+-- SELECT car_admin.vehicle_make,
+-- 		car_location.location_city
+-- FROM car_admin JOIN car_location
+-- ON car_admin.car_id = car_location.car_id
+-- WHERE vehicle_make = "Alfa Romeo";
+
 
 
 
