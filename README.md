@@ -3,7 +3,7 @@ A project using SQL and Tableau
 
 As a student in data science, I worked on this project in my free time to explore Tableau and build a fun dashboard for an online car rental insight. Tableau nowadays has become industries standard for visualization, helping create beautiful graphs mostly by dragging and dropping, making it easier for people to explore and manage data. Here is what my result look like:
 
-!(Picture/Dashboard.png)
+![](Picture/Dashboard.png)
 
 1.	Context
 This dataset is originally from Kaggle (https://www.kaggle.com/datasets/kushleshkumar/cornell-car-rental-dataset ). The author scraped a popular peer-to-peer car sharing platform, built, and released this “Cornell Car Rental Dataset: A Dataset of 5,851 Cars” to the public in July 2020 . He already published some exploration of this dataset https://link.medium.com/Yduf7ceYC8 . 
